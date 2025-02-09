@@ -18,12 +18,12 @@
 
   ## Installation
   To install necessary dependencies, run the following command:
-  npm create vite
   npm install
+  npm run build
 
 
   ## Usage
-  npm run start:dev to start application
+  npm run dev to start application
 
 
   ## License
