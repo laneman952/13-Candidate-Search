@@ -41,23 +41,27 @@ const CandidateSearch = () => {
     }
   }, [index, candidates]);
   console.log(candidate);
-  return <div>
-     <h1>CandidateSearch</h1>
-     <div>
+  return <div className="main-container">
+     <h1 className="candidate-title">CandidateSearch</h1>
+     <div className="candidate-card">
+      <img className="candidate-avatar" src={candidate?.avatar_url} alt={candidate?.login || "No avatar available"} />
+      <div className="candidate-info">
       <h2>{candidate?.login || "No username available"}</h2>
-      <img src={candidate?.avatar_url} alt={candidate?.login || "No avatar available"} />
-      <p>{candidate?.bio || "No bio available"}</p>
-      <p>{candidate?.location || "No location available"}</p>
-      <p>{candidate?.company || "No company available"}</p>
-      <p>{candidate?.email || "No email available"}</p>
-      <button onClick={() => setIndex(index + 1)} disabled={index === 0}>
+      <p>Location: {candidate?.location || "No location available"}</p>
+      <p>Email: {candidate?.email || "No email available"}</p>
+      <p>Company: {candidate?.company || "No company available"}</p>
+      <p>Bio: {candidate?.bio || "No bio available"}</p>
+      </div>
+      <div className="button-container">
+      <button className="candidate-button reject" onClick={() => setIndex(index + 1)} disabled={index === 0}>
         -
       </button>
-      <button onClick={handleAddToSaved} disabled={index === candidates.length - 1}>
+      <button className="candidate-button accept" onClick={handleAddToSaved} disabled={index === candidates.length - 1}>
         +
       </button>
      </div>
     </div>
+  </div>
 };
 
 export default CandidateSearch;

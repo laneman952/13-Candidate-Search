@@ -71,7 +71,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #fc0303;
   }
 }
 
@@ -117,4 +117,160 @@ tbody tr:nth-child(odd) {
 .table {
   width: 80vw;
   table-layout: fixed;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.candidate-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.candidate-card {
+  background-color: black;
+  border-radius: 15px;
+  width: 350px;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candidate-avatar {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.candidate-info {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  width: 100%
+}
+
+.candidate-info h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.candidate-info p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.candidate-info a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.candidate-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.8em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.candidate-button:hover {
+  transform: scale(1.1);
+}
+
+.candidate-button.reject {
+  background-color: red;
+}
+
+.candidate-button.accept {
+  background-color: green;
+}
+
+.candidates-table {
+  width: 80vw;
+  border-collapse: separate;
+  margin-top: 1em;
+}
+
+.candidates-table th {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.candidates-table td {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.candidates-table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}
+
+.candidates-table th,
+.candidates-table td {
+  padding: 15px 20px;
+}
+
+.candidates-table tr {
+  height: 80px; 
+}
+
+.candidates-table td {
+  line-height: 1.6; 
+}
+
+.candidates-table td:last-child {
+  padding: 10px;
+  text-align: center;
 }

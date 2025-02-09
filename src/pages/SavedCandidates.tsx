@@ -16,10 +16,10 @@ const SavedCandidates = () => {
  };
 
   return (
-    <>
+    <div>
       <h1>Potential Candidates</h1>
       {savedCandidates.length === 0 && <p>No saved candidates yet.</p>}
-      <table>
+      <table className="candidates-table">
         <thead>
           <tr>
             <th>Image</th>
@@ -40,12 +40,12 @@ const SavedCandidates = () => {
               <td><p>{candidate.email || "No email available"}</p></td>
               <td><p>{candidate.company || "No company available"}</p></td>
               <td><p>{candidate.bio || "No bio available"}</p></td>
-              <td><button onClick={() => handleRemove(candidate.login)}>-</button></td>
+              <td><button className="remove-button" onClick={() => handleRemove(candidate.login)}>-</button></td>
             </tr>
           ))}
           </tbody>
       </table>
-    </>
+    </div>
   );
 };
 

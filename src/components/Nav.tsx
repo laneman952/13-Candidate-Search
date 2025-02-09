@@ -7,7 +7,6 @@ const Nav = () => {
     <nav>
       <h1>
         <Link to='/' id='logo'>
-          Candidate Search
         </Link>
       </h1>
       <ul className='nav nav-tabs'>
@@ -29,7 +28,7 @@ const Nav = () => {
                 currentPage === '/SavedCandidates' ? 'nav-link active' : 'nav-link'
               }
             >
-              Saved Candidates
+              Potential Candidates
             </Link>
           </h2>
         </li>
