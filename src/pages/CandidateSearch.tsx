@@ -2,10 +2,28 @@ import { useState, useEffect } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import { Candidate } from '../interfaces/Candidate.interface';
 
+
 const CandidateSearch = () => {
   const [candidates, setCandidates] = useState<{ login: string }[]>([]);
   const [index, setIndex] = useState(0);
-  const [candidate, setCandidate] = useState < Candidate >({login: 'No username available', avatar_url: 'No avatar available', bio: 'No bio available', location: 'No location available', company: 'No company available', email: 'No email available', id: 0, name: 'No name available'});
+  const [candidate, setCandidate] = useState < Candidate >({
+    login: 'No username available', 
+    avatar_url: 'No avatar available', 
+    bio: 'No bio available', 
+    location: 'No location available', 
+    company: 'No company available', 
+    email: 'No email available', 
+    id: 0, 
+    name: 'No name available'
+  });
+
+  function handleAddToSaved() {
+    setIndex(index + 1);
+    const savedCandidates = JSON.parse(localStorage.getItem("savedCandidates") || "[]");
+    savedCandidates.push(candidate)
+    localStorage.setItem("savedCandidates", JSON.stringify(savedCandidates))
+  }
+
   useEffect(() => {
     const fetchData = async () => {
       const data = await searchGithub();
@@ -35,8 +53,7 @@ const CandidateSearch = () => {
       <button onClick={() => setIndex(index + 1)} disabled={index === 0}>
         -
       </button>
-      {/* Create an event listener that saves the candidate to local storage. */}
-      <button onClick={() => setIndex(index + 1)} disabled={index === candidates.length - 1}>
+      <button onClick={handleAddToSaved} disabled={index === candidates.length - 1}>
         +
       </button>
      </div>
