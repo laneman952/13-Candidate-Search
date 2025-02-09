@@ -47,4 +47,4 @@
     ![image](https://github.com/user-attachments/assets/e84316b7-d191-4716-8a74-fb89541cc788)
   ![image](https://github.com/user-attachments/assets/a0a65509-e230-471c-abea-82c43bf0eb8e)
 
-  https://drive.google.com/file/d/1dp1g0o5kZxCZo1ywyYQ28Qx01nUINDLu/view?usp=drive_link
+  https://drive.google.com/file/d/1dp1g0o5kZxCZo1ywyYQ28Qx01nUINDLu/view?usp=sharing
