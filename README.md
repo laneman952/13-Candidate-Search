@@ -38,12 +38,11 @@
   To run tests, run the following command:
   No available tests.
 
-  ![image](https://github.com/user-attachments/assets/e84316b7-d191-4716-8a74-fb89541cc788)
-  ![image](https://github.com/user-attachments/assets/a0a65509-e230-471c-abea-82c43bf0eb8e)
-
-
 
 
   ## Questions
   For any questions, you can contact me at [some email](mailto:some email).
   GitHub: [Some username](https://github.com/Some username)
+
+    ![image](https://github.com/user-attachments/assets/e84316b7-d191-4716-8a74-fb89541cc788)
+  ![image](https://github.com/user-attachments/assets/a0a65509-e230-471c-abea-82c43bf0eb8e)
